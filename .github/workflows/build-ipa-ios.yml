@@ -19,6 +19,9 @@ jobs:
     - name: Install dependencies
       run: pod install
 
+    - name: List available simulators
+      run: xcrun simctl list devices
+
     - name: Build the app
       run: xcodebuild build -scheme "OpenEdXProd" -destination "platform=iOS Simulator,name=iPhone 13"
 
